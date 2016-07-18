@@ -47,7 +47,7 @@ def intervalsfromlines(lines):
     """
     for filename, filelineno, line in lines:
         if filelineno >= 4:
-            intvs = line.strip().split(',')[1:]
+            intvs = line.strip().split(',')[2:]
             if any(x == 'Rest' for x in intvs):
                 # This should always yield just one interval or no intervals.
                 intv = tuple(x for x in intvs if x != 'Rest')
