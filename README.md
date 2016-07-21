@@ -26,7 +26,7 @@ These CSV files are what we used with the scripts below to aggregate and visuali
 
 **Aggregating Data:**
 
-The [aggregation scripts](https://github.com/ELVIS-Project/Measuring-Polyphony/tree/master/Scripts) allow us to count the number of different kinds of sonorities in each of our 4-voice (4vv) and 3-voice (3vv) motets. These sonorities are identified as perfect (any combination of P5, P8, P1, and supported P4), mixed (combination of perfect and imperfect), imperfect (any combination of M6, m6, M3, and m3), dissonant (including any of d5, A4, m2, M2, m7, M7, as well as unsupported P4), and rest/solo (only one voice or no voices sounding. These are based on Fuller (1986), although Fuller called our ‘mixed’ imperfect, and our imperfect ‘doubly imperfect’. We aggregated the results based on the groups mentioned above, comparing Montpellier, Fauvel/Br, and Iv+Trem to look at changes over time.
+The [aggregation scripts](https://github.com/ELVIS-Project/Measuring-Polyphony/tree/master/Scripts) (ending in sonorities.py) allow us to count the number of different kinds of sonorities in each of our 4-voice (4vv) and 3-voice (3vv) motets. These sonorities are identified as perfect (any combination of P5, P8, P1, and supported P4), mixed (combination of perfect and imperfect), imperfect (any combination of M6, m6, M3, and m3), dissonant (including any of d5, A4, m2, M2, m7, M7, as well as unsupported P4), and rest/solo (only one voice or no voices sounding. These are based on Fuller (1986), although Fuller called our ‘mixed’ imperfect, and our imperfect ‘doubly imperfect’. We aggregated the results based on the groups mentioned above, comparing Montpellier, Fauvel/Br, and Iv+Trem to look at changes over time.
 
 [*3vv_sonorities.py*](https://github.com/ELVIS-Project/Measuring-Polyphony/blob/master/Scripts/3vv_sonorities.py)
 
@@ -57,7 +57,7 @@ This script must be executed from your command-line interface (“PowerShell” 
 
 *[3vv_timelines.py](https://github.com/ELVIS-Project/Measuring-Polyphony/blob/master/Scripts/3vv_timelines.py) and [4vv_timelines.py](https://github.com/ELVIS-Project/Measuring-Polyphony/blob/master/Scripts/4vv_timelines.py)*
 
-These visualization scripts allow us to generate an image that represents a colour-coded “timeline” of the sonorities in each piece. The resulting images (PNG files) help us identify trends in both sonority and texture at the beginning, middle, end, and other important structural points in each piece.
+These [visualization scripts](https://github.com/ELVIS-Project/Measuring-Polyphony/tree/master/Scripts) (ending in timelines.py) allow us to generate an image that represents a colour-coded “timeline” of the sonorities in each piece. The resulting images (PNG files) help us identify trends in both sonority and texture at the beginning, middle, end, and other important structural points in each piece.
 
 ![Adesto](https://raw.githubusercontent.com/ELVIS-Project/Measuring-Polyphony/master/Timeline-Graphs/3vv/Fvl-Br/Fvl-Br-Breve/adesto_8.png)
 
