@@ -59,7 +59,7 @@ This script must be executed from your command line (“PowerShell” on Windows
 
 These [visualization scripts](https://github.com/ELVIS-Project/Measuring-Polyphony/tree/master/Scripts) (ending in timelines.py) allow us to generate an image that represents a colour-coded “timeline” of the sonorities in each piece. The resulting images (PNG files) help us identify trends in both sonority and texture at the beginning, middle, end, and other important structural points in each piece.
 
-![Adesto](https://raw.githubusercontent.com/ELVIS-Project/Measuring-Polyphony/master/Timeline-Graphs/3vv/Fvl-Br/Fvl-Br-Breve/adesto_8.png)
+![Bona](https://raw.githubusercontent.com/ELVIS-Project/Measuring-Polyphony/master/Timeline-Graphs/3vv/Iv-Trem/Iv-Trem-Breve/bona_12.png)
 
 Like the sonorities.py scripts, the timelines.py scripts take any number of CSV files as arguments in a command. To run one of these scripts, follow these steps:
 
