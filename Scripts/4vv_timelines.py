@@ -1,13 +1,16 @@
 # -*- coding: utf-8 -*-
 
+# author:  Sam Howes  <samuel.howes@mail.mcgill.ca>
+
 """
 This script creates graphical representations of four-voice textures.
-It uses the csv output of the vertical interval indexer. It shades perfect
+It uses the CSV output of the vertical interval indexer. It shades perfect
 and mixed sonorities (according to Fuller (1986)) dark and light grey,
-respectively. Dissonant sonorities are shaded with the function hatch_2
-and imperfect sonorities are shaded with hatch_1. White bands indicate
-rests or solos within the texture. CSV files should be passed as arguments
-when executing the script, e.g., > 4vv_graphs.py decens_24.csv portio_36.csv
+respectively. Dissonant sonorities are shaded with the function hatch_2,
+doubly imperfect sonorities are shaded with hatch_3, and imperfect
+sonorities are shaded with hatch_1. White bands indicate rests or solos
+within the texture. CSV files should be passed as arguments when executing
+the script, e.g., 4vv_timelines.py decens_24.csv portio_36.csv
 """
 
 import sys, csv
@@ -50,39 +53,36 @@ for arg in sys.argv[1:]:
 			
 			# if voice 2 also has a rest
 			if r[1] == r[3] == 'Rest':
-				if   '-' in r[0]:
-					s = [r[0][-2:]]
-				else:
-					s = [r[0]]
+				s = [r[0]]
 
 			# if voice 2 has a note
 			else:
 				if   '-' in r[3]:
-					s = [r[0], r[3][-2:]]
+					s = [r[0], r[3]]
 				elif '-' in r[1]:
-					s = [r[0][-2:], r[1][-2:]]
+					s = [r[0], r[1]]
 				else:
 					s = [r[1], r[3]]
 
 		# if all four voices have notes
 		elif r[2] != 'Rest' and r[4] != 'Rest' and r[5] != 'Rest':
 			if   '-' in r[5]:
-				s = [r[1], r[3], r[5][-2:]]
+				s = [r[1], r[3], r[5]]
 			elif '-' in r[4]:
-				s = [r[0], r[3][-2:], r[4][-2:]]
+				s = [r[0], r[3], r[4]]
 			else:
 				s = [r[2], r[4], r[5]]
 
-		# if voice 3 has a note and at least one of the other voices has a rest
+		# if voice 3 has a note and at least one of the other 3 voices has a rest
 		else:
 			if   '-' in r[5] and 'Rest' in r[1]:
-				s = [r[3], r[5][-2:]]
+				s = [r[3], r[5]]
 			elif '-' in r[5] and 'Rest' in r[3]:
-				s = [r[1], r[5][-2:]]
+				s = [r[1], r[5]]
 			elif '-' in r[4] and 'Rest' in r[5]:
-				s = [r[0], r[4][-2:]]
+				s = [r[0], r[4]]
 			elif '-' in r[4] and 'Rest' in r[0]:
-				s = [r[3][-2:], r[4][-2:]]
+				s = [r[3], r[4]]
 			else:
 				s = [r[2], r[4], r[5]]
 
@@ -142,19 +142,20 @@ for arg in sys.argv[1:]:
 		elif any(x in ss for x in ['d', 'A', '2', '7', '4']):
 			results.append('D')
 
-		elif '3' not in ss and '6' not in ss:
-			results.append('P')
-
-		elif '1' not in ss and '5' not in ss and '8' not in ss:
-			results.append('I')
-
 		elif '5' in ss and '6' in ss: # the only special case
 			results.append('D')
 
+		elif '3' in ss and '6' in ss:
+			results.append('B')
+
+		elif ('3' in ss or '6' in ss) and not ('5' in ss or '8' in ss):
+			results.append('I')
+
+		elif '3' not in ss and '6' not in ss:
+			results.append('P')
+
 		else:
 			results.append('M')
-
-	print(results)
 
 	# make a graph of the results
 	size = ((len(results)*22), 100)
@@ -194,6 +195,16 @@ for arg in sys.argv[1:]:
 				m = m + 1
 		return None
 
+	def draw_hatch_3(img, X1, Y1, X2, Y2):
+		"draws a vertical hatch pattern"
+		n = 0
+		for x in range(X1, X2):
+			for y in range(Y1, Y2):
+				if n % 4 == 0:
+					img.putpixel((x, y), ImageColor.getcolor('black', 'RGB'))
+			n = n + 1
+		return None
+
 	i = 0
 	while i < len(results):
 
@@ -211,6 +222,8 @@ for arg in sys.argv[1:]:
 					draw_hatch_2(img, X1, Y1, X2, Y2)
 				elif results[i] == 'I':
 					draw_hatch_1(img, X1, Y1, X2, Y2)
+				elif results[i] == 'B':
+					draw_hatch_3(img, X1, Y1, X2, Y2)
 				else:
 					draw_band(img, X1, Y1, X2, Y2)
 			
@@ -220,4 +233,5 @@ for arg in sys.argv[1:]:
 		
 		i = i + 1
 
+	print('Writing ' + str(arg[:-4]) + '.png')
 	img.save(str(arg[:-4]) + '.png')
