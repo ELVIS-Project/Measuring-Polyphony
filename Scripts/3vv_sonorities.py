@@ -63,14 +63,19 @@ def intervaltype(intv):
     """
     if len(intv) == 0:
         return None
+    #fintv 'flattens' interval from tuple to make list comprehensions simpler
+    fintv = ''.join(intv)
     for x in ['d', 'A', '2', '7', '4']:
         if any (x in y for y in intv):
             return IntervalType.dissonant
+    if '5' in fintv and '6' in fintv:
+            return IntervalType.dissonant
     if all('P' in x for x in intv):
         return IntervalType.perfect
-    if '3' in x and '6' in x:
+    if '3' in fintv and '6' in fintv:
         return IntervalType.doubly_imperfect
-    if ('3' in x or '6' in x) and not ('5' in x or '8' in x):
+    if (('3' in fintv or '6' in fintv)
+            and not ('5' in fintv or '8' in fintv)):
         return IntervalType.imperfect
     else:
         return IntervalType.mixed
@@ -81,7 +86,7 @@ def intervaltype(intv):
 table = {}                
 for intv in intervalsfromlines(getlines()):
     it = intervaltype(intv)
-    # print(intv, it)
+    print(intv, it)
     table.setdefault(it, 0)
     table[it] += 1
 for k, v in sorted(table.items(), key=lambda x: x[1], reverse=True):
