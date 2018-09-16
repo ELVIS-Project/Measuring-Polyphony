@@ -30,12 +30,12 @@ Parts,"0,1","0,2","1,2"
 208.0,P5,Rest,Rest
 216.0,P8,Rest,Rest
 224.0,P8,Rest,Rest
-232.0,Rest,Rest,m3
-240.0,Rest,m7,Rest
-248.0,Rest,P8,Rest
-256.0,Rest,m3,Rest
-264.0,Rest,Rest,P5
-272.0,Rest,Rest,P5
+232.0,Rest,Rest,P1
+240.0,Rest,P5,Rest
+248.0,Rest,M6,Rest
+256.0,Rest,P8,Rest
+264.0,Rest,Rest,M3
+272.0,Rest,Rest,M3
 280.0,P5,Rest,Rest
 288.0,M3,P5,m3
 296.0,M3,P5,m3
@@ -72,7 +72,7 @@ Parts,"0,1","0,2","1,2"
 544.0,-M3,m6,P8
 552.0,P1,P5,P5
 560.0,P1,P5,P5
-568.0,P5,M2,P5
+568.0,M3,M7,P5
 576.0,P5,P5,P1
 584.0,P5,P5,P1
 592.0,P4,M2,-m3
@@ -110,7 +110,7 @@ Parts,"0,1","0,2","1,2"
 848.0,P8,Rest,Rest
 856.0,M3,Rest,Rest
 864.0,P5,Rest,Rest
-872.0,Rest,Rest,Rest
+872.0,Rest,Rest,P5
 880.0,Rest,P5,Rest
 888.0,Rest,Rest,P8
 896.0,-P5,Rest,Rest
@@ -161,5 +161,5 @@ Parts,"0,1","0,2","1,2"
 1256.0,m3,P5,M3
 1264.0,M3,M6,P4
 1272.0,P4,P8,P5
-1280.0,P4,P8,P5
-1288.0,Rest,Rest,Rest
+1280.0,,P8,P5
+1288.0,,Rest,Rest

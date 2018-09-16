@@ -11,8 +11,8 @@ Parts,"0,1","0,2","1,2"
 168.0,P4,P8,P5
 192.0,P5,Rest,Rest
 216.0,P8,Rest,Rest
-240.0,Rest,m7,Rest
-264.0,Rest,Rest,P5
+240.0,Rest,P5,Rest
+264.0,Rest,Rest,M3
 288.0,M3,P5,m3
 312.0,P4,P8,P5
 336.0,P5,P5,P1
@@ -55,4 +55,4 @@ Parts,"0,1","0,2","1,2"
 1224.0,P5,P8,P4
 1248.0,P1,P5,P5
 1272.0,P4,P8,P5
-1296.0,Rest,Rest,Rest
+1296.0,,Rest,Rest

@@ -33,7 +33,7 @@ Parts,"0,1","0,2","0,3","1,2","1,3","2,3"
 1044.0,P4,P8,P8,P5,P5,P1
 1080.0,Rest,Rest,Rest,M6,Rest,Rest
 1116.0,Rest,Rest,P8,Rest,Rest,Rest
-1152.0,d5,m3,P8,M6,A4,-m3
+1152.0,P5,M3,P8,M6,P4,-M3
 1188.0,Rest,Rest,Rest,P5,Rest,Rest
 1224.0,Rest,Rest,P5,Rest,Rest,Rest
 1260.0,P1,P8,P4,P8,P4,-P5

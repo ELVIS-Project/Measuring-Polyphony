@@ -23,7 +23,7 @@ numT = 0
 if len(sys.argv) == 1:
 	print('\n> Please specify a file(s)')
 
-agg = raw_input('\nWould you like to aggregate results? (y/n)\n>')
+agg = input('\nWould you like to aggregate results? (y/n)\n>')
 
 for arg in sys.argv[1:]:
 
@@ -144,7 +144,7 @@ if agg == 'y':
 	print('Perfect = ' + str(numP))
 	print('Mixed = ' + str(numM))
 	print('Imperfect = ' + str(numI))
-	print('Doubly Imperfect = ' + str(results.count('B')))
+	print('Doubly Imperfect = ' + str(numB))
 	print('Dissonant = ' + str(numD))
 	print('Rest = ' + str(numR))
 	print('----------------------------------------')
