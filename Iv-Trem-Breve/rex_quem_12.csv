@@ -7,7 +7,7 @@ Parts,"0,1","0,2","0,3","1,2","1,3","2,3"
 36.0,P4,Rest,P8,Rest,P5,Rest
 48.0,m3,P5,Rest,M3,Rest,Rest
 60.0,P4,P8,Rest,P5,Rest,Rest
-72.0,M3,P5,P5,m3,m3,P1
+72.0,P5,P5,P5,P1,P1,P1
 84.0,P1,P5,m3,P5,m3,-M3
 96.0,-P4,P5,M3,P8,M6,-m3
 108.0,-M2,m6,P4,m7,P5,-m3
@@ -27,14 +27,14 @@ Parts,"0,1","0,2","0,3","1,2","1,3","2,3"
 276.0,P4,P8,Rest,P5,Rest,Rest
 288.0,M3,Rest,M3,Rest,P8,Rest
 300.0,Rest,Rest,Rest,P1,P8,P8
-312.0,Rest,M3,M3,Rest,Rest,P8
-324.0,-P5,Rest,P8,Rest,P5,Rest
+312.0,Rest,P5,P5,Rest,Rest,P8
+324.0,-P5,P1,P8,P5,P5,P8
 336.0,-P4,M3,Rest,M6,Rest,Rest
 348.0,-P4,P5,Rest,P8,Rest,Rest
 360.0,-P4,P5,P5,P8,P8,P1
 372.0,-m3,P4,P5,m6,m7,M2
-384.0,P4,M6,P8,M3,P5,m3
-396.0,P4,M6,P8,M3,P5,m3
+384.0,P4,m6,P8,m3,P5,M3
+396.0,P4,m6,P8,m3,P5,M3
 408.0,M3,M6,M3,P4,P8,P5
 420.0,P4,P8,Rest,P5,Rest,Rest
 432.0,P4,Rest,P8,Rest,P5,Rest
@@ -103,7 +103,7 @@ Parts,"0,1","0,2","0,3","1,2","1,3","2,3"
 1188.0,Rest,Rest,Rest,P1,P1,P1
 1200.0,P1,P8,M6,P8,M6,-m3
 1212.0,Rest,Rest,Rest,P5,P5,P1
-1224.0,Rest,Rest,Rest,Rest,m7,Rest
+1224.0,Rest,Rest,Rest,Rest,P5,Rest
 1236.0,Rest,M3,P5,Rest,Rest,m3
 1248.0,Rest,P8,Rest,Rest,Rest,Rest
 1260.0,Rest,Rest,Rest,P5,P5,P1
@@ -121,3 +121,4 @@ Parts,"0,1","0,2","0,3","1,2","1,3","2,3"
 1404.0,Rest,Rest,Rest,M6,P4,-M3
 1416.0,P4,P8,M6,P5,M3,-m3
 1428.0,P4,P8,P8,P5,P5,P1
+1440.0,,,Rest,,Rest,Rest
